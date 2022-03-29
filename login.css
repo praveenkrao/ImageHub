@@ -1,0 +1,144 @@
+
+
+.logincontainer{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+
+    background-image:  url(images/beach1.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+    color: #fff;             /* text color */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.loginbox{
+    
+    width: 320px;
+    height: 420px;
+
+    box-sizing: border-box;
+   
+    background-color: #000;
+    padding: 10px 30px;
+}
+
+
+.loginbox .people{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+
+
+.loginbox h3{
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.loginbox label{
+    margin: 0;
+    padding: 0;
+    
+    font-weight: bold;
+    
+    letter-spacing: 1px;
+    
+}
+
+.loginbox input[type="text"], input[type="password"] {
+    border: none;
+    width: 255px;
+    box-shadow: 0px 0px 0px red;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;     
+    padding: 4px 8px; 
+    font-size: 16px;
+    font-family: 'Abril Fatface';
+    margin-bottom: 20px;
+    margin-top: 6px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+
+.loginbox input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    outline: 1px solid blue;
+    border-radius: 2px;
+}
+
+
+
+
+.loginbox input[type="submit"]{
+    outline: none;
+    border: none;
+    width: 244px;
+    height: 34px;
+    margin-top: 12px;
+    background-color: #fb2525;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;   /* to make forgot password below to login button*/
+}
+
+.loginbox input[type="submit"]:hover{
+    transform: scale(1.02);
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+
+.loginbox a{
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    opacity: .8;
+
+}
+
+.loginbox a:hover{
+    color: rgb(66, 218, 245);
+}
+
+
+
+.loginbox span{
+    color: azure;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.loginbox span:hover{
+    color: rgb(250, 83, 83);
+}
+
+
+
+
+@media screen and (max-width: 360px) {       /*  Incomplete Responsivness */
+    
+.loginbox{
+    width: 100%;
+    height: 100vh;
+}
+
+}

@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+body{
+    width: 100%;
+  height: auto;
+} */
+
+.contact_container{
+    width: 100%;
+    height: 600px;
+    border-top: 8px solid white;
+    border-bottom: 16px solid white;
+
+    /* border-top: 1px solid black;  ............Removing of upper border makes distortion in the contact Form but Don't know why....... */
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .8)), url(images/contactbg1.jpg);
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+
+
+  .contact_container .simple{
+      width: 60%;
+      height: auto;
+      
+      margin: auto;
+      /* margin-top: 100px; */
+      padding-top: 80px;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+  }
+.simple h2{
+    padding: 8px 0px;
+    letter-spacing: 2px;
+    font-family:   verdana,sans-serif;
+
+}
+
+.simple p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.contact_form{
+    width: 60%;
+    height: 420px;
+    border-radius: 8px;
+   box-shadow: 4px 4px 8px black;
+    background-color: rgb(118, 118, 253);
+    position: absolute;                 /* This part */
+    top: 50%;                            /* of code is */
+    left: 50%;                            /* used to make element in the center of*/
+    transform: translate(-50% , -50%);     /* parent element */
+    z-index: 3;                  /*2nd top index*/
+
+    transform: scale(0);
+    visibility: hidden;
+    transition: ease-in .2s;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.popup_form{                      /* This class added with help of javascript*/
+    transform: scale(1);
+    visibility: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    
+}
+
+
+
+.contact_form form{
+    width: 80%;
+    padding: 5px 10px;
+    box-shadow: 2px 4px 10px black;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.contact_form p .btn1{
+   text-align: right;
+   background-color: black;
+   padding: 2px 6px;
+}
+.contact_form form input[type='text'], input[type="email"], textarea{
+   
+    margin: 4px 0px;
+    padding: 4px 8px;
+    width: 100%;
+    height: 30px;
+    outline: 2px solid white;
+    /* border: none; */
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.contact_form form textarea{
+    height: 160px;
+    letter-spacing: 3px;
+   
+}
+
+
+.contact_form form label{
+   font-size: 20px;
+   font-weight: bold;
+   letter-spacing: 3px;
+   text-shadow: 1px 1px 5px black;
+}
+
+
+
+
+.contact_form  .btn2{    /* Form Submit button*/ 
+    width: 40%;
+    border: none;
+    border-radius:12px;
+    background-color: rgb(69, 231, 0);
+    padding: 4px 12px;
+    margin-top: 4px;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 2px 3px 5px black;
+}
+
+
+
+
+
+
+
+
+
+
+.success_message{            
+    width: 30%;
+    height: 200px;
+    box-shadow: 1px 1px 4px green;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 4;                             /* top index*/
+
+    transform: scale(0);
+    visibility: hidden;
+    transition: ease-in .2s;
+
+}
+
+.popup_success{                            /* This class added with help of javascript*/
+    transform: scale(1);
+    visibility: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+
+
+
+.btn3{
+    width: 160px;
+    height: 40px; 
+    background-color: black;
+    border: 1px solid white;
+    box-shadow: 1px 1px 2px blue ,1px 1px 3px blue;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 2;                         /* 3rd Top Index*/
+
+    cursor: pointer;
+}
+
+.btn3:hover{
+     box-shadow: 1px 1px 5px red ,1px 1px 5px red;
+     font-size: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:500px) {
+
+    .contact_form {
+        width: 90%;
+    }
+    
+.contact_form form{
+    width: 100%;
+    }
+   
+.contact_form  .btn2{
+    width: 50%;
+    font-size: 18px;
+    
+}
+
+
+}

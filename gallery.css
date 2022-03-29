@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.gallery_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,.7)), url(images/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.gallery_display{
+    width: 85%;
+    height: auto;
+    /* border: 2px solid green; */
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly ;
+}
+
+.photo_container{
+    height: 260px;
+    width: 300px;
+  /* border: 2px solid red; */
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 15px 24px black;
+  
+ 
+  overflow: hidden;   /* For .photodetails to translate in y-direction*/
+  
+  position: relative;
+}
+
+.photo{
+    height: 100%;
+    width: 100%;
+    /* border: 3px solid black; */
+    transition: ease-in-out .4s;
+}
+
+
+.photo img{
+   height: 100%;
+    width: 100%;
+}
+
+
+.photo_details{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(241, 241, 241);
+    bottom:-130px;
+    transition: ease-in-out .4s;
+}
+ 
+.photo_details h3{
+    text-align: left;
+    color: black;
+    height: 45px;
+    /* border: 0px solid gray; */
+    margin-bottom: 6px;
+    box-shadow: 0px 1px 4px black;
+}
+
+
+
+.photo_details .para1 .like_btn{
+    float: left; 
+    margin-left: 2px;
+    margin-right: 4px;
+    padding: 1px 6px;
+    background-color: blue;
+    color: aliceblue;
+    letter-spacing: 1px;
+    border: none;
+    box-shadow: 1px 1px 2px red,1px 1px 2px red;
+    border-radius: 4px;
+}
+
+.photo_details .para1 .like_count{
+    color: black;
+}
+
+
+.photo_details .para1 .comment_btn{
+    float: right;
+    margin-right: 4px;
+    padding: 3px 4px;
+    background-color: blue;
+    color: aliceblue;
+    border: none;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+.photo_details .para2{
+   margin-top: 15px;
+   border-bottom: 1px solid black;
+   text-align: center;
+}
+
+
+.photo_details .para2 .readmore{
+   background-color: black;
+   border: none;
+    color: aliceblue;
+    font-size: 16px;
+    letter-spacing: 1px;
+   box-shadow: 1px 1px 3px blue, 1px 1px 2px red;
+   padding: 2px 4px;
+  
+ }
+
+
+
+
+.photo_details .para3 .upload_time{
+    color: rgb(18, 18, 23);
+    float: left;
+    margin-left: 4px;
+}
+
+.photo_details .para3 .user_name{
+    color: rgb(18, 18, 23);
+    float: right;
+    margin-right: 6px;
+}
+
+
+.photo_container:hover .photo_details{
+    opacity: 1;
+     
+     transform: translateY(-130px);
+}
+
+
+.photo_container:hover .photo{
+    transform: scale(1.2);
+
+   filter: brightness(.3);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+.gallery_btn{
+    width: 30%;
+    height: 60px;
+    margin-top: 20px;
+    border-radius: 16px;
+    background-color: rgb(149, 222, 226);
+    box-shadow: 0px 3px 12px white;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.gallery_btn .prev, .next{
+    margin: 0px 12px;
+    padding: 6px 16px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgb(68, 9, 9);
+}

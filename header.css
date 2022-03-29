@@ -1,0 +1,188 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+nav{
+    background-color: #222;
+    padding: 5px 20px;
+    font-family: sans-serif;
+    border-bottom: 1px solid grey;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: #94ffff;
+}
+
+.menu li{
+    font-size: 18px;
+    padding: 15px 5px;
+}
+
+.item li a{
+    display: block;
+}
+
+.logo a{
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo:hover a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+
+.button .secondary{
+ border-bottom: 1px solid red;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    order: 1;
+}
+.item.button{
+    order: 2;
+}
+
+
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;         /*on reducing screen size this this property will be 'block' by adding new class with JS*/
+}
+
+.active{
+    display: block;
+}
+
+.toggle{
+ cursor: pointer;
+}
+
+.bars{
+    background:#999;
+    display: inline-block;
+    height: 2px;
+    width: 20px;
+    position: relative;
+}
+
+.bars::before , .bars::after{
+    background:#999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 20px;
+    position: absolute ;
+}
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+
+/*............Tablet View..........*/
+
+@media all and (min-width:468px){
+
+    .menu{
+        justify-content: center;
+    }
+    
+    .logo{
+        flex: 1;
+    }
+
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle{
+        order: 2;
+    }
+    .button.secondary{
+        border: 0;
+    }
+    .button a{
+        padding: 7px 15px;
+        background-color: teal;
+        border: 1px solid #006d6d;
+        border-radius: 18px;
+    }
+.button.secondary a{
+    background: transparent;
+   }
+
+   .button a:hover{
+       transition: all .25s;
+   }
+
+   .button:not(.secondary) a:hover{
+       background: #006d6d;
+       border-color: #005959;
+   }
+
+   .button.secondary a:hover{
+       color: #ddd;
+   }
+
+}
+
+@media all and (min-width:768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+
+    .toggle{
+        display: none;
+    }
+    .logo{
+        order :0;
+      }
+
+.item{
+    order: 1;
+}
+
+.button{
+    order: 2;
+}
+.menu li{
+    padding: 15px 10px;
+}
+.menu li.button{
+    padding-right: 0;
+}
+
+
+
+
+
+}
